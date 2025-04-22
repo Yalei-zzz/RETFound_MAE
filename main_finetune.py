@@ -25,6 +25,10 @@ from engine_finetune import train_one_epoch, evaluate
 import warnings
 import faulthandler
 
+#指定镜像与登录
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
+login("")
+
 faulthandler.enable()
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
